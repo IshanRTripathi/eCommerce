@@ -32,11 +32,9 @@ public class login extends HttpServlet {
             rd.forward(request, response);
         }
         else{
-            out.print("Sorry UserName or Password Error!");
+            out.print("Wrong UserName or Password !");
             RequestDispatcher rd=request.getRequestDispatcher("/login.jsp");
             rd.include(request, response);
-
         }
-
     }
 }
