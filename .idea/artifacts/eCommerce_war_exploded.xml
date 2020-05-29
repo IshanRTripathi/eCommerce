@@ -7,6 +7,11 @@
         <element id="directory" name="classes">
           <element id="module-output" name="eCommerce" />
         </element>
+        <element id="directory" name="lib">
+          <element id="file-copy" path="$PROJECT_DIR$/../SQL Connector JARs/mysql-connector-java-5.1.49/mysql-connector-java-5.1.49.jar" />
+          <element id="file-copy" path="$PROJECT_DIR$/../SQL Connector JARs/mysql-connector-java-5.1.49/mysql-connector-java-5.1.49.zip" />
+          <element id="file-copy" path="$PROJECT_DIR$/../SQL Connector JARs/mysql-connector-java-5.1.49/mysql-connector-java-5.1.49-bin.jar" />
+        </element>
       </element>
     </root>
   </artifact>
