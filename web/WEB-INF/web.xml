@@ -46,4 +46,13 @@
         <servlet-name>Error</servlet-name>
         <url-pattern>/error</url-pattern>
     </servlet-mapping>
+
+    <servlet>
+        <servlet-name>ViewCart</servlet-name>
+        <servlet-class>Servlets.ViewCart</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>ViewCart</servlet-name>
+        <url-pattern>/ViewCart</url-pattern>
+    </servlet-mapping>
 </web-app>

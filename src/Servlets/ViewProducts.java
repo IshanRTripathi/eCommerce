@@ -20,17 +20,6 @@ public class ViewProducts extends HttpServlet {
 
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         response.getWriter().append("Served at: ").append(request.getContextPath());
-
-        /*ProductDAO dao = new ProductDAO();
-
-        List<Product> products = dao.getAllProducts();
-        System.out.println("\n\n\nProduct details:"+products);
-        HttpSession session = request.getSession();
-
-        session.setAttribute("productList", products);
-
-        session.setAttribute("cartSize",dao.findCartSize());*/
-
-        response.sendRedirect(request.getContextPath()+"/viewProducts.jsp");
+//        response.sendRedirect(request.getContextPath()+"/viewProducts.jsp");
     }
 }

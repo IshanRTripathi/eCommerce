@@ -33,9 +33,10 @@ public class ProductDAO {
     public int addToCart(int productID) {
         int i = 0;
         try {
-            this.statement = this.connection.prepareStatement("Insert into cart(productID, customerID) values(?,?)");
+            this.statement = this.connection.prepareStatement("Insert into cart(productid, customerid) values(?,?)");
             this.statement.setInt(1, productID);
             this.statement.setInt(2, 1);
+            i=statement.executeUpdate();
         } catch (Exception e)
         {
             System.out.println(e.getMessage());
