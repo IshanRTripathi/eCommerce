@@ -8,10 +8,40 @@ import java.util.*;
 
 public class Product {
     private int productID;
-    String productName;
-    double productPrice;
-    int units;
-    String category;
+    private String productName;
+    private String productDescription;
+    private double productPrice;
+    private int units;
+    private String category;
+
+    public String getProductDescription() {
+        return productDescription;
+    }
+
+    public void setProductDescription(String productDescription) {
+        this.productDescription = productDescription;
+    }
+
+
+    public Product(int productID, String productName, String productDescription, int units, String category, double productPrice) {
+        this.productID = productID;
+        this.productName = productName;
+        this.productDescription = productDescription;
+        this.units = units;
+        this.category = category;
+        this.productPrice= productPrice;
+    }
+
+    @Override
+    public String toString() {
+        return "Product{" +
+                "productID=" + productID +
+                ", productName='" + productName + '\'' +
+                ", productPrice=" + productPrice +
+                ", units=" + units +
+                ", category='" + category + '\'' +
+                '}';
+    }
 
     public int getUnits() {
         return units;

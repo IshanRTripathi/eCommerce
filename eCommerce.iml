@@ -19,19 +19,26 @@
     </content>
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
-    <orderEntry type="library" scope="PROVIDED" name="Tomcat 9.0.35" level="application_server_libraries" />
+    <orderEntry type="library" name="Tomcat 9.0.35" level="application_server_libraries" />
     <orderEntry type="module-library">
       <library>
         <CLASSES>
-          <root url="file://$MODULE_DIR$/../SQL Connector JARs/mysql-connector-java-5.1.49" />
+          <root url="file://$MODULE_DIR$/../mysql-connector-java-8.0.20" />
         </CLASSES>
         <JAVADOC />
         <SOURCES>
-          <root url="file://$MODULE_DIR$/../SQL Connector JARs/mysql-connector-java-5.1.49" />
-          <root url="file://$MODULE_DIR$/../SQL Connector JARs/mysql-connector-java-5.1.49/src" />
+          <root url="file://$MODULE_DIR$/../mysql-connector-java-8.0.20/src/build/java" />
+          <root url="file://$MODULE_DIR$/../mysql-connector-java-8.0.20/src/demo/java" />
+          <root url="file://$MODULE_DIR$/../mysql-connector-java-8.0.20/src/generated/java" />
+          <root url="file://$MODULE_DIR$/../mysql-connector-java-8.0.20/src/legacy/java" />
+          <root url="file://$MODULE_DIR$/../mysql-connector-java-8.0.20/src/main/core-api/java" />
+          <root url="file://$MODULE_DIR$/../mysql-connector-java-8.0.20/src/main/core-impl/java" />
+          <root url="file://$MODULE_DIR$/../mysql-connector-java-8.0.20/src/main/protocol-impl/java" />
+          <root url="file://$MODULE_DIR$/../mysql-connector-java-8.0.20/src/main/user-api/java" />
+          <root url="file://$MODULE_DIR$/../mysql-connector-java-8.0.20/src/main/user-impl/java" />
+          <root url="file://$MODULE_DIR$/../mysql-connector-java-8.0.20/src/test/java" />
         </SOURCES>
-        <jarDirectory url="file://$MODULE_DIR$/../SQL Connector JARs/mysql-connector-java-5.1.49" recursive="false" />
-        <jarDirectory url="file://$MODULE_DIR$/../SQL Connector JARs/mysql-connector-java-5.1.49" recursive="false" type="SOURCES" />
+        <jarDirectory url="file://$MODULE_DIR$/../mysql-connector-java-8.0.20" recursive="false" />
       </library>
     </orderEntry>
   </component>

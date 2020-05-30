@@ -5,7 +5,7 @@
          version="4.0">
     <servlet>
         <servlet-name>login</servlet-name>
-        <servlet-class>Servlets.login</servlet-class>
+        <servlet-class>Servlets.Login</servlet-class>
     </servlet>
     <servlet-mapping>
         <servlet-name>login</servlet-name>
@@ -18,5 +18,32 @@
     <servlet-mapping>
         <servlet-name>HomeScreen</servlet-name>
         <url-pattern>/homeScreen</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>ViewProducts</servlet-name>
+        <servlet-class>Servlets.ViewProducts</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>ViewProducts</servlet-name>
+        <url-pattern>/ViewProducts</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>AddToCart</servlet-name>
+        <servlet-class>Servlets.AddToCart</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>AddToCart</servlet-name>
+        <url-pattern>/AddToCart</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>Error</servlet-name>
+        <servlet-class>Servlets.Error</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>Error</servlet-name>
+        <url-pattern>/error</url-pattern>
     </servlet-mapping>
 </web-app>

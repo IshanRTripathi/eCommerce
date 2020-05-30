@@ -1,4 +1,4 @@
-<%@ page import="Servlets.login" %><%--
+<%@ page import="Servlets.Login" %><%--
   Created by IntelliJ IDEA.
   User: ishan
   Date: 28-05-2020
@@ -11,8 +11,7 @@
     <title>$Title$</title>
   </head>
   <body>
-    <%="Response from Login class "%>
-
+    <h1>Login <a href="${pageContext.request.contextPath}/login.jsp">here</a> </h1>
   </form>
   </body>
 </html>
