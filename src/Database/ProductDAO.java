@@ -43,6 +43,31 @@ public class ProductDAO {
         }
         return i;
     }
+    public List<Product> getItemsFromCart()
+    {
+        List<Product> res= new ArrayList<>();
+        try{
+            /*this.statement= this.connection.prepareStatement("SELECT * from cart where customerID =1");
+            this.resultSet= statement.executeQuery();
+            while(resultSet.next())
+                res.add(resultSet.getInt(1));*/
+
+            this.statement= this.connection.prepareStatement("Select * from products\n" +
+                    "inner join cart\n" +
+                    "where products.productid = cart.productid");
+            this.resultSet= statement.executeQuery();
+            while (resultSet.next())
+            {
+                res.add(new Product(resultSet.getInt("products.productid"),
+                        resultSet.getString("productname"),resultSet.getString("productdescription"),
+                        resultSet.getInt("units"), resultSet.getString("category"),
+                        resultSet.getDouble("price")));
+            }
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+        return res;
+    }
 
     public List<Product> getAllProducts(){
         this.products= new ArrayList<>();
@@ -100,5 +125,50 @@ public class ProductDAO {
             System.out.println(e.getMessage());
         }
         return size;
+    }
+
+    public int removeFromCart(int orderID) {
+        int i = 0;
+        System.out.println("Removing "+orderID);
+        try {
+            this.statement = this.connection.prepareStatement("DELETE from cart where productid = "+orderID);
+            i=statement.executeUpdate();
+        } catch (Exception e)
+        {
+            System.out.println(e.getMessage());
+        }
+        return i;
+    }
+
+    public int getProductID(Product p) {
+        try {
+            System.out.println("Getting details for \n"+p);
+            this.statement= this.connection.prepareStatement("Select productid from products where productname ='"+p.getProductName()+"' and price = "+p.getProductPrice());
+            this.resultSet= statement.executeQuery();
+            if(resultSet.next())
+            {
+                int x=resultSet.getInt(1);
+                System.out.println("ID of product is: "+x);
+                return x;
+            }
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+        return 1;
+    }
+
+    public double getTotalPrice()
+    {
+        try{
+            this.statement= this.connection.prepareStatement("select sum(price) from products inner join\n" +
+                                                                "cart c on products.productid = c.productid");
+            this.resultSet= statement.executeQuery();
+            if(resultSet.next())
+                return resultSet.getInt(1);
+        }
+        catch (SQLException e) {
+            System.out.println(e.getMessage());
+        }
+        return 0;
     }
 }

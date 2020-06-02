@@ -12,9 +12,9 @@
 </head>
 <body>
 <form action="/login" method="post">
-    username: <input type="text" name="username" width="30"/>
+    username: <input type="text" name="username" value="Ishan" width="30"/>
     <br>
-    password: <input type="password" name="password" width="30"/>
+    password: <input type="password" name="password" value="password" width="30"/>
     <br>
     <input type="submit" value="Login"/>
 </form>

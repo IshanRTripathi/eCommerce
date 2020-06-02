@@ -13,7 +13,7 @@
 </head>
 <body>
 <h1>You have <%=(int) session.getAttribute("cartSize")%> items <br>
-    View your cart <a href="viewCart">here</a>
+    View your cart <a href="ViewCart">here</a>
 </h1>
 <%!
     List<Product> products;
@@ -46,7 +46,9 @@
 
     <br>
     <br>
-    <h1> Visit cart <a href="" >here </a></h1>
+    <form action="Logout.jsp">
+        <input type="button" value="Logout">
+    </form>
 </table>
 </body>
 </html>
